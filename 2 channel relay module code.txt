@@ -1,0 +1,28 @@
+int Relay1 = 22;
+int Relay2 = 24;
+void setup() {
+
+Serial.begin(9600);
+
+pinMode(Relay1, OUTPUT);
+pinMode(Relay2, OUTPUT);
+
+digitalWrite(Relay1, HIGH);
+digitalWrite(Relay2, HIGH);
+}
+void loop() {
+
+  digitalWrite(Relay1, LOW);
+  Serial.println("Relay 1 On");
+  delay(1000);
+  digitalWrite(Relay2, LOW);
+  Serial.println("Relay 2 On");
+  delay(1000);
+  digitalWrite(Relay2, HIGH);
+  Serial.println("Relay 2 Off");
+  delay(1000);
+  digitalWrite(Relay1, HIGH);
+  Serial.println("Relay 1 Off");
+  delay(1000);
+
+}
